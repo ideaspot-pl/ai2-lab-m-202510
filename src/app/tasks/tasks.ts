@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Task} from '../task';
 import {Tasks as TasksService} from '../tasks';
 import {FormsModule} from '@angular/forms';
+import {forkJoin, Observable} from 'rxjs';
 
 @Component({
   selector: 'app-tasks',
@@ -51,6 +52,23 @@ export class Tasks implements OnInit {
         alert(err);
         this.ngOnInit();
       }
+    });
+  }
+
+  archiveCompleted() {
+    const observables: Observable<any>[] = [];
+    for (const task of this.tasks) {
+      if (!task.completed) {
+        continue;
+      }
+
+      task.archived = true;
+      observables.push(this.tasksService.put(task));
+    }
+
+    // refresh page when all updates finished
+    forkJoin(observables).subscribe(() => {
+      this.ngOnInit();
     });
   }
 }

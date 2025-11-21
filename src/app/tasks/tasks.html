@@ -1,0 +1,19 @@
+<div class="container">
+  <form class="new-task"></form>
+
+  <div class="tasks">
+    @for ( task of tasks; track task) {
+      <div class="task">
+        <div class="title">{{ task.title }}</div>
+        <div class="deadline">
+          @if (task.deadline) {
+            <span>{{ task.deadline }}</span>
+          }
+        </div>
+        <div class="actions">
+          <input type="checkbox" />
+        </div>
+      </div>
+    }
+  </div>
+</div>

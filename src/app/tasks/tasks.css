@@ -52,6 +52,11 @@
   }
 }
 
+.tasks .task.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
 .tasks .task .title {
   grid-area: title;
 }

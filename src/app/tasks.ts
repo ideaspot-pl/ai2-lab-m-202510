@@ -7,7 +7,7 @@ import {Task} from './task';
   providedIn: 'root',
 })
 export class Tasks {
-  readonly baseUrl = 'http://localhost:23346';
+  readonly baseUrl = 'http://localhost:12346';
 
   constructor(
     private http: HttpClient,

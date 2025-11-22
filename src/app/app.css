@@ -13,6 +13,10 @@ header a {
   text-decoration: none;
 }
 
+header a.active {
+  text-decoration: underline;
+}
+
 .router-outlet {
   flex-grow: 1;
 }
@@ -21,4 +25,9 @@ footer {
   background-color: var(--primary-color);
   color: var(--accent-color);
   padding: 0.5em 1em;
+}
+
+header nav {
+  display: flex;
+  gap: 1em;
 }

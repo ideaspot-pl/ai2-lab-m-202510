@@ -9,6 +9,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInput} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatCardModule} from '@angular/material/card';
+import {DatePipe} from '@angular/common';
 
 @Component({
   selector: 'app-tasks',
@@ -19,7 +21,9 @@ import {provideNativeDateAdapter} from '@angular/material/core';
     MatCheckbox,
     MatFormFieldModule,
     MatInput,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatCardModule,
+    DatePipe,
   ],
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',

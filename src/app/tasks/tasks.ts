@@ -5,19 +5,21 @@ import {FormsModule} from '@angular/forms';
 import {forkJoin, Observable} from 'rxjs';
 import {MatButton} from '@angular/material/button';
 import {MatCheckbox} from '@angular/material/checkbox';
-import {MatFormField, MatHint, MatLabel} from '@angular/material/form-field';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInput} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {provideNativeDateAdapter} from '@angular/material/core';
 
 @Component({
   selector: 'app-tasks',
+  providers: [provideNativeDateAdapter()],
   imports: [
     FormsModule,
     MatButton,
     MatCheckbox,
-    MatFormField,
-    MatLabel,
+    MatFormFieldModule,
     MatInput,
-    MatHint
+    MatDatepickerModule
   ],
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',

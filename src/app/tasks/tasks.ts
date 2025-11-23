@@ -3,11 +3,13 @@ import {Task} from '../task';
 import {Tasks as TasksService} from '../tasks';
 import {FormsModule} from '@angular/forms';
 import {forkJoin, Observable} from 'rxjs';
+import {MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-tasks',
   imports: [
-    FormsModule
+    FormsModule,
+    MatButton
   ],
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',

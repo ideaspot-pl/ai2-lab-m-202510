@@ -4,12 +4,14 @@ import {Tasks as TasksService} from '../tasks';
 import {FormsModule} from '@angular/forms';
 import {forkJoin, Observable} from 'rxjs';
 import {MatButton} from '@angular/material/button';
+import {MatCheckbox} from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-tasks',
   imports: [
     FormsModule,
-    MatButton
+    MatButton,
+    MatCheckbox
   ],
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',

@@ -5,13 +5,19 @@ import {FormsModule} from '@angular/forms';
 import {forkJoin, Observable} from 'rxjs';
 import {MatButton} from '@angular/material/button';
 import {MatCheckbox} from '@angular/material/checkbox';
+import {MatFormField, MatHint, MatLabel} from '@angular/material/form-field';
+import {MatInput} from '@angular/material/input';
 
 @Component({
   selector: 'app-tasks',
   imports: [
     FormsModule,
     MatButton,
-    MatCheckbox
+    MatCheckbox,
+    MatFormField,
+    MatLabel,
+    MatInput,
+    MatHint
   ],
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',
